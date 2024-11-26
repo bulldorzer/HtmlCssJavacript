@@ -1,0 +1,62 @@
+.header{width: 100%; background-color: #c9c7c7;}
+.sec, .main-sec{width: 100%;  padding: 150px;}/* border: 1px solid blue; */
+.header .inner,/* header클래스 안에잇는 inner 클래스 */
+.footer .inner,
+.header .h_inner{height: 100px;}
+.main-inner{
+    height: 100px;
+}
+.inner,.h_inner{
+    width: 1250px; 
+    margin: 0px auto;/* 상하 좌우 */
+}
+
+.title{
+    font: bold 24px 'inherit'; /* 부모의 속성을 상속받다 기본글꼴 맑은고딕*/
+    margin-bottom: 40px; /* margin: 0 0 40px; */
+    text-align: center; /* 글자 가운데 정렬*/
+}
+.wrap,.box-wrap{ /* 박스의 부모 */
+    width: 100%;
+    /* 자식 요소를 배치하는 방법 - 선형배치 */
+    display: flex;
+    flex-direction: row; /* magin 없이 나란히 배열*/
+    justify-content: space-between;
+}
+
+/* best-item 클래스의 자식중에서 클래스가box인 요소에 적용 */
+.best-item .box{
+    width: 396px;
+}
+.banner .inner{width: 100%;}
+.banner .title{text-align: left;}
+.banner .box-wrap{justify-content: flex-start;} /* 시작점 차례대로*/
+.banner .box:nth-of-type(1){width: 50%;}
+.banner .box:nth-of-type(2){width: 625px;}
+
+.new-item .box{
+    width: 610px;
+}
+
+.gallery .box,.main-box{
+    width: 290px;
+}
+
+/* 박스 클래스의 모든 요소에 적용*/
+.box{
+    height: 200px;
+    background-color: rgb(201, 201, 114);
+}
+.footer{width: 100%; background-color: #333;} 
+
+/*
+
+    요소 중심으로 바깥 여백 설정
+        반드시 단위 설정해야 함
+        안쓰면 0처리 됨
+    margin : 40px; --> 4방향
+    margin : 20px auto; --> 상하/좌우
+    margin : 20px 30px 40px; --> 상/좌우/하
+    margin : 20px 30px 40px 40px; --> 상부터 시계방향 상->우->하->좌
+
+*/
