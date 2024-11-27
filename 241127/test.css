@@ -1,0 +1,62 @@
+/* position 문제 정가운데 정렬*/
+
+/*
+    부모 선택자 container 클래스
+    자식 선택자 .item
+
+    item을 부모 기준으로 정렬하고 싶다
+    필요한 속성들을 기록하시오
+*/
+
+.container .item{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*
+position 이용한 가운데 정렬과
+display:flex를 이용한 가운데 정렬의 차이점을 기록하시오
+
+position
+ - 아래 요소에 같은 값을 지정하려면, 모두 동일한 위치에 배치되고, 겹쳐진다
+ - 속성들을 자식요소에 적용
+
+display:flex를 이용한 정렬
+ - 속성을 부모요소에 기록 -> 자식 요소가 정렬 되는 것
+ - 자식요소가 차례대로 나열되고, 형제끼리 한 덩어리로 정렬이 된다.
+*/
+
+/*
+margin 가운데 정렬
+
+    margin-left : auto;
+    margin-right : auto;
+    magin : 0 auto;
+
+    마진 좌우를 auto로 주면 가운데 정렬 효과가 있음
+    단, 부모 요소 아래 자식이 1개만 있어야 함.
+    
+    마진,패딩 - 단위 반드시 기록 안쓰면 0
+    margin : 40px; - 4방향(위좌우하)
+    margin : 20px auto; - 상하/좌우
+    margin : 20px 30px 40px 상/좌우/하
+    margin : 20px 30px 40px 50px 시계방향 : 상->우->하->좌
+
+    많이 쓰는 스타일
+    margin-bottom : 40px;
+    margin : 0 0 40px;
+    margin-top : 30px;
+    margin : 30px 0 0;
+    margin : 0 auto; // 좌우
+
+    <section class="sec best_item">
+            <div class="inner">
+            </div>
+    </section>
+    - css 선택자는 .sec .inner (부모 상속관계)
+
+    <div class="a"></div>
+    <div class="b"></div>
+    -css 선택자는 .a.b
+*/

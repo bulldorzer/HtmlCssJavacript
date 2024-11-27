@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .txt-1 {
+            font: 900 16px 'inherit';
+            text-decoration: none;
+            color: white;
+            /* text-shadow: 가로 세로 불러 사이즈 색상; */
+            text-shadow: 0px 0px 3px yellow,
+                0px 0px 5px orange,
+                0px 0px 20px red;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            box-shadow: 5px 5px 3px blue;
+            border: 1px solid #000;
+        }
+
+        .list {
+            list-style-type: square;
+            list-style-position: outside;
+            /* 축약 */
+            list-style: circle inside;
+            list-style: none;
+        }
+        .tbl{
+            width: 300px;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        th,td{
+            border: 1px solid #000;
+            /*
+                실선    : solid
+                점선    : dotted
+                파선    : dashed
+                이중선  : double
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <h2>테이블</h2>
+    <table class="tbl">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+    <h2>text-decoration</h2>
+    <div class="circle"></div>
+    <p class="txt-1">선없음</p>
+    <p style="text-decoration: underline;">밑줄</p>
+    <p style="text-decoration: overline;">윗줄</p>
+    <p style="text-decoration: line-through;">취소선</p>
+    <ul class="list">
+        <li>사과</li>
+        <li>사과</li>
+        <li>사과</li>
+        <li>사과</li>
+    </ul>
+</body>
+
+</html>

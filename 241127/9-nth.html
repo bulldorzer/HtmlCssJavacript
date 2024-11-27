@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            border: 1px solid #000;
+        }
+
+        /* 부모의 자식요소의 n번째가 해당 선택자와 일치하면 적용*/
+        .item-1 div:nth-last-child(2) {
+            background-color: pink;
+        }
+
+        .item-1 div:nth-last-child(3) {
+            background-color: yellow;
+        }
+
+        /* 해당 선택자 요소중에서 n번째 선택*/
+        .item-2 div:nth-of-type(2) {
+            background-color: pink;
+        }
+
+        .item-2 div:nth-of-type(3) {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>nth-last-child</h2>
+    <p>부모의 자식요소의 n번재가 해당 선택자와 일치하면 적용<br>일치하지 않을시 적용이 안될수도 있음</p>
+    <ul>
+        <li>first-child : 부모의 자식 중에서 첫번째 요소</li>
+        <li>last-child  : 부모의 자식 중에서 마지막 요소</li>
+    </ul>
+    <div class="wrap item-1">
+        <div>div태그1</div>
+        <p>p태그 1</p>
+        <div>div태그2</div>
+        <div>div태그3</div>
+        <p>p태그 2</p>
+        <div>div태그4</div>
+    </div>
+
+    <h2>nth-of-type</h2>
+    <p>해당 선택자 요소중에서 n번째 선택</p>
+    <ul>
+        <li>first-of-type : 해당 요소중에서 첫번째 선택</li>
+        <li>last-of-type : 해당 요소중에서 마지막 선택</li>
+        <li>nth-last-of-type : 뒤에서부터 n번째</li>
+    </ul>
+    <div class="wrap item-2">
+        <div>div태그1</div>
+        <p>p태그 1</p>
+        <div>div태그2</div>
+        <div>div태그3</div>
+        <p>p태그 2</p>
+        <div>div태그4</div>
+    </div>
+</body>
+
+</html>

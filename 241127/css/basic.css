@@ -1,0 +1,47 @@
+/* 기본적으로 암기해야하는 CSS */
+*{
+    /* 배치,위치 -> 요소크기 -> 배경 -> 테두리 -> 폰트 -> 기타 */
+
+    /* 배치/위치 */
+    display: none/block/inline/inline-block/flex/grid;
+    position: static/relative/absolute/fixed/sticky;
+    left: 0; right: 0; /* left-right : left 우선순위 높음*/
+    top: 0; bottom: 0; /* top-bottom : top 우선순위 높음*/
+    z-index: 0;/* position을 적용할 경우, 겹쳤을 때 우선순위 조정*/
+
+    /* 크기 */
+    width: 너비;
+    height: 높이;
+    padding: 선과 도형의 공백;
+    margin: 총범위와 도형과의 공백;
+
+    /* 배경 */
+    background-color: ;
+    background-image: url();
+    background-position: ;
+    background-repeat: ;
+    background-attachment: ;
+    background-size: 크기;/* 축약에 포함이 안됨, position과 겹침 */
+    background: 색상 이미지 옵션 옵션; /*축약*/
+
+    /* 테두리 */
+    border-width: 선굵기;
+    border-color: 선색상;
+    border-style: 선모양;
+    border: 선굵기 선모양 선색상;/* 옵션값 순서 바뀌어도 됨 */
+    border-radius: 곡률;/* 타원 : % 단위 둥근사각형 : px단위 사용*/
+
+    /* 폰트 */
+    font-size: 폰트크기;
+    font-family: 글꼴;
+    font-weight: 굵기;
+    font-style: 기울임;
+    line-height: 줄간격;
+    font: 크기 "글꼴"; /* 반드시 2가지 옵션은 지정해야함 */
+    font: 굵기 기울임 크기/줄간격 "글꼴";
+    
+    /* 기타 */
+    transform: 변형/회전/기울임;
+    transition: 변환; /* a->b로 변하는 속도 저정 */
+    opacity: 불투명도;
+}

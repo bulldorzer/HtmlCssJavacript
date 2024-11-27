@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 목록 기호 없애기 */
+ul,
+ol.li {
+    list-style: none;
+}
+
+/* 링크 기본 밑줄 없애기*/
+a {
+    text-decoration: none;
+}
+
+/* 
+    꼭 필요한 상황 아니라면 height 지정 안함
+    -> 자식요소의 높이를 합산해서 자동으로 설정되게끔 하기 위해서
+    -> 중간에 내용의 변동이 있을때마다 자동으로 높이설정
+    -> 고정 높이를 주면 내용이 넘쳤을때 정해진 크기 밖으로 내용이 넘친다
+    => 레이아웃이 깨질 수 있음
+*/
+/* header 너비 100% 배경#444 */
+.header{ width: 100%; background-color: #444;}
+
+/* header의자식 h_inner 너비 1250 높이100 마진 상하없고 좌우 auto */
+.header .h_inner{width: 1250px; height: 100px; margin: 0 auto;}
+
+/* content 너비 100% */
+.content{width: 100%;}
+
+/* sec 너비 100% 패딩 상하120px 좌우0 */
+.sec{width: 100%; padding: 120px 0;}
+
+/* sec의자식inner에 너비 1250px 마진 좌우0 상하auto */
+.sec .inner{width: 1250px; margin: 0 auto;}
+
+/* 섹션자식박스워럽에 너비 100%으로 배치flex space-between배치 */
+.sec .box_wrap{width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between;}
+
+/* 섹션자식 박스 높이 200px 선1px 블랙테두리 */
+.sec .box{height: 200px; border: 1px solid #000;}
+
+.new_item .box {
+    width: 610px;
+}
+
+.best_item .box {
+    width: 396px;
+}
+
+.event .box {
+    width: 290px;
+}
+
+.gallery .box {
+    width: 396px;
+    margin: 0 0 30px;
+}
+
+.footer {
+    width: 100%;
+    background-color: #444
+}
+
+.footer .f_inner {
+    width: 1250px;
+    height: 100px;
+    margin: 0 auto;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{box-sizing: border-box;}
+        .btn{
+            width: 100px; line-height: 30px;
+            margin: 10px;
+            background-color: transparent;
+            border: 1px solid #000;
+            text-transform: uppercase;
+        }
+        .item-1{border-radius: 7px;}
+        .item-2{border-radius: 15px;}
+        .item-3{border-radius: 50%;}
+        .item-4{border-radius: 0 15px 0 0;}
+        .item-5{border-radius: 15px 15px 0 0;}
+        .item-6{border-radius: 15px 0 0 15px;}
+        .item-7{border-radius: 15px 0 }
+        .item-8{border-radius: 0 15px;}
+
+        .toggle{
+            width: 36px; height: 36px;
+            background-color: transparent;
+            border: 1px;
+        }
+        .toggle span{
+            display: block;
+            width: 100%; height: 2px;
+            margin: 5px 0;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <button class="btn item-1">button</button>
+    <button class="btn item-2">button</button>
+    <button class="btn item-3">button</button>
+    <button class="btn item-4">button</button>
+    <button class="btn item-5">button</button>
+    <button class="btn item-6">button</button>
+    <button class="btn item-7">button</button>
+    <button class="btn item-8">button</button>
+</body>
+</html>

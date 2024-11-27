@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            background-color: yellow;
+            border: 1px solid #000;
+        }
+
+        .wrap {
+            margin: 50px 0;
+            border: 5px solid #000;
+        }
+        .wrap.radius-1{
+            border-radius: 30px;
+        }
+        .wrap.radius-2{
+            border-radius: 50%;
+        }
+
+        .item {
+            font-size: 16px;
+            background-color: pink;
+            border: 1px solid #000;
+        }
+
+        .pic{width: 100px; margin: 10px;}
+    </style>
+</head>
+
+<body>
+
+    <div class="box">블록</div>
+    <div class="box">블록</div>
+    <div class="box">블록</div>
+    <div>
+        <div class="wrap radius-1">
+            <span class="item">인라인 요소</span>
+            <span class="item">인라인 요소</span>
+            <span class="item">인라인 요소</span>
+        </div>
+    </div>
+    <div class="wrap radius-2">
+        <img src="imges/1.png" alt="고스트라이더" class="pic">
+        <img src="imges/1.png" alt="" class="pic">
+        <img src="imges/1.png" alt="" class="pic">
+    </div>
+    <!-- 
+        [요소]
+
+        블록 100% 차지 , 위->아래로 배치
+         ㄴ 너비, 높이, 마진, 패딩이 적용 됨
+        
+         인라인 : 글자처럼취급 좌->우로 배치(줄바꿈)
+          ㄴ 너비 높이 X 마진은 좌우만 패딩 4방향 됨
+        대표 태그 >> span, strong, em, 가상요소
+        
+        인라인 블록
+         ㄴ 자기 영역만큼 차지, 좌->배치
+         ㄴ 너비, 높이 적용0, 마진 상하 적용0
+        대표태그 >> img, input
+    -->
+</body>
+
+</html>
