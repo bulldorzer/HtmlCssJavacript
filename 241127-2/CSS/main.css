@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{text-decoration: none;}
+
+.header {
+    width: 100%;
+    background-color: #333;
+}
+
+.header .h_inner {
+    width: 1250px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.content {
+    width: 100%;
+    padding: 100px 0;
+}
+
+.content .inner {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.content .title {
+    margin: 0 0 20px;
+    font: bold 28px 'inherit';
+    text-align: center;
+    color: #163a52;
+}
+
+.content .txt {
+    max-width: 780px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: #999;
+    line-height: 1.5;
+}
+
+.content .box_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.content .box .btn {
+    display: block;
+    width: 200px;
+    margin: 20px 0 0;
+    /*height: 30px;*/
+    
+    background-color: #c89765;
+    border-radius: 100px;
+    color: #fff;
+    /* line-height: 40px;
+    font-weight: bold; font-size: 14px; 를 아래줄 처럼 줄일수 있음 */
+    font: bold 14px/40px 'inherit';
+    text-align: center;
+    text-transform: uppercase;
+    transition-duration: 0.3s;
+    
+}
+
+.content .box .btn:hover{background-color: #fff; color: #333;}
+
+.content .box {
+    /* height: 300px; */
+    /* background-color: #ddd; */
+}
+
+.service {}
+
+/*
+    [요소]
+
+        블록 100% 차지 , 위->아래로 배치
+         ㄴ 너비, 높이, 마진, 패딩이 적용 됨
+        
+         인라인 : 글자처럼취급 좌->우로 배치(줄바꿈)
+          ㄴ 너비 높이 X 마진은 좌우만 패딩 4방향 됨
+        대표 태그 >> span, strong, em, 가상요소
+        
+        인라인 블록
+         ㄴ 자기 영역만큼 차지, 좌->배치
+         ㄴ 너비, 높이 적용0, 마진 상하 적용0
+        대표태그 >> img, input
+*/
+
+
+.service .box {
+    width: 610px;
+    padding: 30px 0;
+    /* margin: 0 0 30px; */
+    background-color: #f0f0f0;
+    display: flex;
+}
+
+/*
+    odd:홀수 | even : 짝수 | 3n : 3의배수 | 2n : 2의배수 | 2n-1,2n+1:홀수
+    .box .pic:nth-of-type(odd)
+     - 박스 하위 요소중에서 pic 요소가 홀수번인것
+     .box:nth-of-type(odd) .pic
+     - 홀수번호 박스중에서 하위에 있는 pic선택
+*/
+.service .box:nth-of-type(odd) .pic {
+    order: 1;
+    border-left: 1px solid #ccc;
+}
+
+.service .box:nth-of-type(even) .pic {
+    border-right: 1px solid #ccc;
+}
+
+.service .box .pic {
+    width: 100px;
+    text-align: center;
+}
+
+.service .box .info {
+    padding: 0 50px;
+}
+
+.service .box .info .sub_ttl {
+    font: 14px bold 'inherit';
+    color: #163a52;
+}
+
+.service .box .info .sub_txt {
+    font: 14px/1.5 bold 'inherit';
+    color: #999;
+    margin: 20px 0;
+}
+
+.service .box .info .price {
+    font: 14px bold 'inherit';
+    color: #c89765;
+}
+
+
+/*
+    about 구역에서
+    inner를 1250px->100%로 너비 변경
+    box_wrap의 자식들이 항상 시작점부터 쌓이도록 할 것 배경은 #ddd색으로
+    title와txt은 글자 왼쪽정렬
+    박스들중 하나는 너비50% 박스안에 이미지태그는 커버형으로
+    description은 너비 625px 패딩은 우는0px 나머지는 다 130px로 정의
+*/
+.about {}
+
+.about .inner {
+    width: 100%;
+}
+
+.about .box_wrap {
+    justify-content: flex-start;
+    background-color: #ddd;
+}
+
+.about .title {
+    text-align: left;
+}
+
+.about .txt {
+    text-align: left;
+}
+
+.about .box.picture {
+    width: 50%;
+}
+
+/* overflow: hidden; */
+/* 자식요소를 감춰라.*/
+.about .box.picture img {
+    object-fit: cover;
+}
+
+.about .box.description {
+    width: 625px;
+    padding: 130px 0 130px 130px;
+}
+
+/* .about .box:nth-of-type(1){width: 50%;}
+.about .box:nth-of-type(2){width: 625px;} */
+
+/*
+    background: repeat scroll 기본값임
+    만약 background 이전에 no-repeat 또는 fixed 값으로 지정했다면
+    덮어쓰기가 된다
+
+    background-size
+        cover속성 : 공간을 다 덮어야 하기 때문에 그림이 짤릴 수 있음.
+        contain : 그림이 공간 안에 다들어가야 하기 때문에, 공간이 남을 수 있음.
+
+    overflow : hidden 
+    아까전에 부모에 높이가 있었음 자식의 높이나 너비가 부모의 크기를 넘지 않게 하려면
+    -> 자식이 삐져 나온다 = 부모의 다음 형제 요소에 넘친게 겹쳐서 표시 될수 있음
+    지금은 부모에 높이 없음 자식크기만큼 알아서 높이가 설정되는 상태
+    그래서 overflowhidden 필요없음
+
+*/
+/* background-size: contain;
+background: url('../images/home-1-960x613.jpg') no-repeat; */
+
+.barbers {}
+
+.barbers .box {
+    width: 396px;
+}
+
+.barbers .box .pic {
+    width: 100%;
+}
+
+.barbers .box .pic img {
+    width: 100%;
+}
+
+.barbers .box .info {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+.barbers .box .info .name {
+    font: bold 16px 'inherit';
+    color: #163a52;
+}
+
+.barbers .box .info .sub_txt {
+    font: 14px/1.5 'inherit';
+    color: #999;
+    margin: 20px 0;
+}
+
+.barbers .box .info .barber_sns {}
+
+.barbers .box .info .barber_sns a {
+    display: inline-block;
+    overflow: hidden;
+    font-size: 16px;
+    color: #c89765;
+    padding: 0 7px;
+}
+
+.barbers .box .info .barber_sns i {}
+
+.barbers .box .info .barber_sns a span {
+    font-size: 0;
+    text-indent: -9999px;
+}
+
+
+
+.gallery {
+    /* background-image: url('/241127-2/images/bg-image-3.jpg');
+    background-repeat: no-repeat; */
+    background: url('/241127-2/images/bg-image-3.jpg') no-repeat;
+    /* background-size빼고 축약이 가능함 */
+    background-size: cover;
+    padding: 200px 0;
+}
+
+.gallery .title {
+    text-align: left;
+    color: #fff;
+    font-size: 40px;
+}
+
+.gallery .txt {
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.gallery .box {
+    width: 50%;
+}
+
+.blog {
+    background-color: #f0f0f0;
+}
+.blog .box {
+    width: 100%;
+    height: 460px;
+    display: flex;
+}
+.blog .box:nth-of-type(1) {
+    background: url(/241127-2/images/post-bg-2.jpg) no-repeat;
+    background-size: cover;
+}
+.blog .box:nth-of-type(2) {
+    background-color: #fff;
+}
+.blog .box:nth-of-type(3) {
+    background: url(/241127-2/images/post-bg-1.jpg) no-repeat;
+    background-size: cover;
+}
+.blog .box .pic {
+    width: calc(100%-670px);
+    overflow: hidden;
+}
+.blog .box .pic img {
+    width: 100%;
+}
+.blog .box .info {
+    width: 670px;
+    padding: 100px;
+}
+.blog .box:nth-last-of-type(odd) .info .sub_ttl {
+    font-size: 40px;
+    color: #fff;
+    margin: 0 0 20px;
+}
+.blog .box:nth-last-of-type(odd) .info .sub_txt {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #eee;
+}
+
+.footer {
+    width: 100%;
+    background-color: #fff;
+}
+.footer .f_inner {
+    width: 1250px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+}
+.footer .company_wrap{width: 100%; display: flex; flex-direction: column; align-items: center;}
+.footer .company_wrap .logo{margin: 0 0 30px;}
+.footer .company_wrap .logo a{
+    display: block; width: 233px; height: 100px; overflow: hidden;
+    background: url(/241127-2/images/logo-default-199x36.webp) no-repeat;
+    background-size: 100%;
+    text-indent: 100%; white-space: nowrap;
+}
+/* line-height: 40px;
+    font-weight: bold; font-size: 14px; 를 아래줄 처럼 줄일수 있음 */
+    /* font: bold 14px/40px 'inherit'; */
+.footer .company_wrap .company_txt{
+    max-width: 33%;
+    font: 16px/1.5px 'inherit';
+    color: #999;
+    text-align: center;
+}
+
+.footer .menu_wrap{margin: 30px 0;}
+.footer .menu_wrap .menu{display: flex; justify-content: center;}
+.footer .menu li{
+    margin: 20px 0;
+}
+.footer .menu li a{
+    padding: 0 20px; text-transform: uppercase;
+    font-size: 14px; color: #163A52;
+    transition: 0.3s;/* 원본 요소에 바뀌는 시간 적기*/
+}
+.footer .f_sns{
+    display: inline-block;
+    overflow: hidden;
+    font-size: 16px;
+    color: #c89765;
+    padding: 0 7px;
+}
+
+.footer .f_sns a{padding: 0 7px; color: #c89765;}
+.footer .f_sns a i{padding: 0 7px; color: #c89765;}
+.footer .f_sns a span{font-size: 0; text-indent: -9999px;}
+
+.footer .copyrighter_wrap{width: 100%; background-color: #ccc;}
+.footer .copyrighter_wrap .copyrighter{
+    text-align:center; line-height: 70px; color: #999;
+    font-size: 14px;
+}
