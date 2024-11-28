@@ -3,7 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-a{text-decoration: none;}
+
+a {
+    text-decoration: none;
+}
 
 .header {
     width: 100%;
@@ -54,7 +57,7 @@ a{text-decoration: none;}
     width: 200px;
     margin: 20px 0 0;
     /*height: 30px;*/
-    
+
     background-color: #c89765;
     border-radius: 100px;
     color: #fff;
@@ -64,10 +67,13 @@ a{text-decoration: none;}
     text-align: center;
     text-transform: uppercase;
     transition-duration: 0.3s;
-    
+
 }
 
-.content .box .btn:hover{background-color: #fff; color: #333;}
+.content .box .btn:hover {
+    background-color: #fff;
+    color: #333;
+}
 
 .content .box {
     /* height: 300px; */
@@ -285,38 +291,47 @@ background: url('../images/home-1-960x613.jpg') no-repeat; */
 .blog {
     background-color: #f0f0f0;
 }
+
 .blog .box {
     width: 100%;
     height: 460px;
     display: flex;
 }
+
 .blog .box:nth-of-type(1) {
     background: url(/241127-2/images/post-bg-2.jpg) no-repeat;
     background-size: cover;
 }
+
 .blog .box:nth-of-type(2) {
     background-color: #fff;
 }
+
 .blog .box:nth-of-type(3) {
     background: url(/241127-2/images/post-bg-1.jpg) no-repeat;
     background-size: cover;
 }
+
 .blog .box .pic {
     width: calc(100%-670px);
     overflow: hidden;
 }
+
 .blog .box .pic img {
     width: 100%;
 }
+
 .blog .box .info {
     width: 670px;
     padding: 100px;
 }
+
 .blog .box:nth-last-of-type(odd) .info .sub_ttl {
     font-size: 40px;
     color: #fff;
     margin: 0 0 20px;
 }
+
 .blog .box:nth-last-of-type(odd) .info .sub_txt {
     font-size: 16px;
     line-height: 1.5;
@@ -325,55 +340,101 @@ background: url('../images/home-1-960x613.jpg') no-repeat; */
 
 .footer {
     width: 100%;
-    background-color: #fff;
+    padding: 100px 0 0;
 }
+
 .footer .f_inner {
     width: 1250px;
     margin: 0 auto;
-    background-color: #f0f0f0;
 }
-.footer .company_wrap{width: 100%; display: flex; flex-direction: column; align-items: center;}
-.footer .company_wrap .logo{margin: 0 0 30px;}
-.footer .company_wrap .logo a{
-    display: block; width: 233px; height: 100px; overflow: hidden;
+
+.footer .company_wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .company_wrap .logo {
+    margin: 0 0 20px;
+}
+
+.footer .company_wrap .logo a {
+    display: block;
+    width: 233px;
+    height: 100px;
+    overflow: hidden;
     background: url(/241127-2/images/logo-default-199x36.webp) no-repeat;
     background-size: 100%;
-    text-indent: 100%; white-space: nowrap;
+    text-indent: 100%;
+    white-space: nowrap;
 }
+
 /* line-height: 40px;
     font-weight: bold; font-size: 14px; 를 아래줄 처럼 줄일수 있음 */
-    /* font: bold 14px/40px 'inherit'; */
-.footer .company_wrap .company_txt{
+/* font: bold 14px/40px 'inherit'; */
+.footer .company_wrap .company_txt {
     max-width: 33%;
     font: 16px/1.5px 'inherit';
     color: #999;
     text-align: center;
 }
 
-.footer .menu_wrap{margin: 30px 0;}
-.footer .menu_wrap .menu{display: flex; justify-content: center;}
-.footer .menu li{
+.footer .menu_wrap {
+    margin: 30px 0;
+}
+
+.footer .menu_wrap .menu {
+    display: flex;
+    justify-content: center;
+}
+
+.footer .menu_wrap .menu li {
     margin: 20px 0;
 }
-.footer .menu li a{
-    padding: 0 20px; text-transform: uppercase;
-    font-size: 14px; color: #163A52;
-    transition: 0.3s;/* 원본 요소에 바뀌는 시간 적기*/
+
+.footer .menu_wrap .menu li a {
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #163A52;
+    transition: 0.3s;
+    /* 원본 요소에 바뀌는 시간 적기*/
 }
-.footer .f_sns{
-    display: inline-block;
-    overflow: hidden;
-    font-size: 16px;
+
+.footer .menu_wrap .menu li:first-of-type a{
     color: #c89765;
-    padding: 0 7px;
+}
+.footer .menu_wrap .menu li a:hover{
+    color: #c89765;
+}
+/* 바뀔 속성만 적기*/
+
+.footer .f_sns {
+    text-align: center;
+    margin: 0 0 40px;
 }
 
-.footer .f_sns a{padding: 0 7px; color: #c89765;}
-.footer .f_sns a i{padding: 0 7px; color: #c89765;}
-.footer .f_sns a span{font-size: 0; text-indent: -9999px;}
+.footer .f_sns a {
+    padding: 0 7px;
+    color: #c89765;
+}
 
-.footer .copyrighter_wrap{width: 100%; background-color: #ccc;}
-.footer .copyrighter_wrap .copyrighter{
-    text-align:center; line-height: 70px; color: #999;
+.footer .f_sns a i {}
+
+.footer .f_sns a span {
+    font-size: 0;
+    text-indent: -9999px;
+}
+
+.footer .copyrighter_wrap {
+    width: 100%;
+    background-color: #eee;
+}
+
+.footer .copyrighter_wrap .copyrighter {
+    text-align: center;
+    line-height: 70px;
+    color: #999;
     font-size: 14px;
 }
