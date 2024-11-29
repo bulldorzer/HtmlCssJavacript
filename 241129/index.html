@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>241129</title>
+    <!-- 폰트 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- 아이콘 -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.1/css/fontawesome.min.css">
+    <!-- reset -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 
+        jsDelivr.com/cdnjs.com 
+        : 사이트에 가면 폰트 or 아이콘을 연결할 수 있는 주소를 얻어 올 수 있다.
+        = cdn Content Delivery Network (웹폰트, 웹아이콘)
+        폰트/아이콘 cdn주소는 reset과 내가 만든 css 위에다가 걸어준다
+    -->
+    <header class="header">
+        <div class="h_inner">
+            <h1 class="logo"><a href="#">Korea Music</a></h1>
+        </div>
+    </header>
+
+    <section class="visual">
+        <div class="inner">
+            <video class="bg_vod" src="/241129/video/bg.mp4" muted></video>
+            <div class="main_txt">
+                <p class="small">코딩을 넘어</p>
+                <p class="big"><span>음악의 즐거움</span>까지</p>
+            </div>
+        </div>
+    </section>
+    <section class="free_music content">
+        <div class="inner">
+            <img src="/241129/img/phone.png" alt="앱 실행 하면">
+            <h2 class="title">내 손안의 <br>작은 파티,</h2>
+            <p class="description">Korea Music에서 인기있는 음악을 3개월 동안 무료로 들어보세요.</p>
+        </div>
+    </section>
+    <section class="promotion content">
+        <div class="inner">
+            <h2 class="title">모든 음악과 뮤직 비디오<br>3개월 내내 33% 할인</h2>
+            <p class="description">평색 오직 한 번 뿐인 혜택</p>
+            <!-- 페이지 이동시에 a태그 새로운 기능 추가 되는 버튼일땐 type=button 으로 만듬-->
+            <a href="#" class="btn">멤버십 가입하고 혜택받기</a>
+        </div>
+    </section>
+    <section class="rate_plan content">
+        <div class="inner">
+            <div class="title">요금제</div>
+            <ul class="plan_list">
+                <li class="item event">
+                    <p class="event_badge">EVENT</p>
+                    <h3>첫 구독</h3>
+                    <p>3개월 33% 할인</p>
+                    <p>월 3,500원부터</p>
+                    <p>(부가세 포함)</p>
+                </li>
+                <li class="item">
+                    <h3>모든 음원<br>무제한 듣기</h3>
+                    <p>월 5,500원부터</p>
+                    <p>(부가세 포함)</p>
+                </li>
+                <li class="item">
+                    <h3>무제한 듣기<br>+ 다운로드</h3>
+                    <p>월 8,800원부터</p>
+                    <p>(부가세 포함)</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="membership content">
+        <div class="inner">
+            <h2 class="title">멤버쉽정보</h2>
+            <div class="wrap">
+                <div class="item">
+                    <h3>무제한 듣기</h3>
+                    <ul class="benefit">
+                        <li>모든 기기에서 재생</li>
+                        <li>최대 40% 할인</li>
+                        <li>뮤직비디오 무제한</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>다운로드</h3>
+                    <ul class="benefit">
+                        <li>모든 기기에서 재생</li>
+                        <li>데이터 없이 마음껏 재생</li>
+                        <li>뮤직비디오 소장</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>유의사항</h3>
+                    <p class="description">3개월 동안 33% 할인된 가격으로 결제되고 3개월 후부터 매달 정상 가격으로 결제됩니다. 멤버십은 언제든지 해지하실 수 있고, 추가로
+                        부담해야 할 금액은 없습니다. 모든 가격은 부가가치세가 포함된 가격입니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="f_inner">
+            <nav class="f_menu">
+                <ul>
+                    <li><a href="#">코리아AC 소개</a></li>
+                    <li><a href="#">사용자 이용 약관</a></li>
+                    <li><a href="#">개인정보</a></li>
+                    <li><a href="#">취급방침</a></li>
+                    <li><a href="#">자주 묻는 질문</a></li>
+                    <li><a href="#">고객 센터</a></li>
+                </ul>
+            </nav>
+            <div class="company_info">
+                <p><strong>(주) 코리아AC</strong></p>
+                <!-- 일반적인 문서나 페이지의 저자 또는 게시자의 연락처 -->
+                <address>
+                    대표 KANG YOUNG HOON, 이윤수<br>
+                    개인정보보호책임자 강영훈<br>
+                    사업자 번호 313-86-00797<br>
+                    통신판매업 제 2019-서울중구-1034 호<br>
+                    서울특별시 중구 청계천로 100 시그니쳐타워 동관 10층 코리아AC<br>
+                </address>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

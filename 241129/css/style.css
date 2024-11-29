@@ -1,0 +1,93 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+/* font-family 1순위 불러올 글씨체 2순위 기본값(돋움)*/
+
+/* 목록 기호 없애기 */
+ul, il, ol{list-style: none;}
+/* a태그 밑줄 없애기 */
+a{text-decoration: none;}
+
+/* 
+    :root 선택자
+    html 문서에서 가장 위에 있는 요소를 선택
+    일반적인 html 태그
+    문서 전체제 적용하는 스타일을 써준다
+    
+    변수설정 
+    :root{} 선택자 안에
+    --변수명 : 값;
+    
+    적용 -> 속성 : var(--변수명);
+    var()안에 지정한 이름을 넣으면됨
+
+    사용하는 이유 
+    - 일관성유지
+    - 유지보수 편의성
+    - 재사용성
+    - 태마 변경
+*/
+
+:root{
+    --container-size : 1080px;
+    --primary-color : #fff;
+    --description-color : #ccc;
+}
+
+                                    /* :root 적용*/
+body{background-color: #000; color: var(--primary-color); font-family: Pretendard, Noto Sans KR, sans-serif,'맑은 고딕';} 
+
+/* 1920-> 1600 -> 1440 -> 1280 -> 1080 -> 1024 -> 768 너비 크기들*/
+.header{width: 100%;}
+.header .h_inner{width: 1080px; margin: 0 auto;}
+.header .logo{padding: 30px 0;}
+.header .logo a{font: bold 24px/30px 'inherit'; color: #fff;}
+
+.visual{width: 100%; position: relative;}
+.visual .bg_vod{width: 100%; opacity: 0.5;}/* opacity-투명도 설정 */
+.visual .main_txt{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); text-align: center;}/* transform 부모기준으로 이동*/
+.visual .small{font: 48px 'inherit'; color: rgba(217,217,217,0.5);}
+.visual .big{font: 80px/1.5 'inherit'; color: #fff;}
+.visual .big span{font-weight: bolder;}
+
+.content{width: 100%; padding: 100px 0;}
+.content .inner{width: 1250px; margin: 0 auto;} 
+.content .title{font-weight: bold; font-size: 24px; margin-bottom: 40px;}
+
+.free_music{}
+.free_music img{width: 504px;}
+.free_music .title{font-size: 56px/1.2; margin: 30px 0;}
+.free_music .description{font-size: 24px; line-height: 1.5;}
+
+/* 색상 #280357, 폰트사이즈 - 40, 24px 24px*/
+.promotion{ width: 100%; background-color: #280357;}
+.promotion .title{font: 40px 'inherit';}
+.promotion .description{font: 24px 'inherit';}
+.promotion .btn{display: inline-block; padding: 20px 40px; font: 24px 'inherit';color: #fff; border: 1px solid #fff; border-radius: 10px; }
+
+.rate_plan{}
+.rate_plan .plan_list{text-align: center;}
+.rate_plan .plan_list li{padding: 50px; border: 2px solid #fff; border-radius: 20px;}
+.rate_plan .plan_list li.event{border-color: #7f5fff;}
+.rate_plan .plan_list li .event_badge{width: 100%; padding: 10px 0; background-color:#7f5fff; border-radius: 5px; color: #fff;}
+.rate_plan .plan_list li h3{}
+.rate_plan .plan_list li h3 p{}
+
+
+.membership{}
+.membership .title{}
+.membership .wrap{}
+.membership .wrap .item{padding: 50px 100px;border: 2px solid #fff; border-radius: 20px;}
+.membership .wrap .item h3{font-size: 24px; font-weight: bold; margin: 24px 0; text-align: center;}
+.membership .wrap .item .benefit{}
+.membership .wrap .item .benefit li{list-style: disc; line-height: 2;}
+.membership .wrap .item .description{line-height: 2;}
+
+.footer{width: 100%; padding: 100px 0;}
+.footer .f_inner{width: 1080px; margin: 0 auto;}
+.footer .f_menu{}
+.footer .f_menu ul{display: flex; margin: 0 0 30px;}
+.footer .f_menu ul li{margin-right: 20px;}
+.footer .f_menu ul li a{font-weight: bold; color: #fff;}
+.footer .company_info {color: #999;}
+.footer .company_info p{margin: 0 0 10px;}
+.footer .company_info address{line-height: 1.5;}
+

@@ -1,0 +1,88 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+/* font-family 1순위 불러올 글씨체 2순위 기본값(돋움)*/
+
+/* 목록 기호 없애기 */
+ul, li, ol{list-style: none;}
+/* a태그 밑줄 없애기 */
+a{text-decoration: none;}
+
+/* 
+    :root 선택자
+    html 문서에서 가장 위에 있는 요소를 선택
+    일반적인 html 태그
+    문서 전체제 적용하는 스타일을 써준다
+    변수설정
+*/
+
+:root{
+    --container-size : 1080px;
+    --title-color : #fff;
+    --description-color : #ccc;
+}
+
+
+body{background-color: #000; color: #fff; font-family: Pretendard, Noto Sans KR, sans-serif,'맑은 고딕';} 
+
+/*
+    화면크기 1080
+    정원 : 너비 = 높이 border-radius 50%이상
+    span요소 : 나란히 배치 너비/높이 적용
+    inline-block 변경
+    글자가 한줄인데 line-height있으면 height 없어도 됨
+*/
+
+.content {width: 100%; padding: 100px 0;}
+.content .inner{width: 1080px; margin: 0 auto;}
+.content .title{font-weight: bold; font-size: 24px; margin-bottom: 40px;}
+.content .wrap{display: flex; gap: 30px; flex-wrap: wrap;}
+.content .wrap .item{margin: 0 0 10px;}
+.content .wrap img{width: 100%; border-radius: 10px;}
+
+/* 뮤직 매거진 */
+.magazine{}
+.magazine .picture{width: 412px;}
+.magazine .info{width: calc(100% - 422px);}
+.magazine .tag{display: inline; margin: 0 0 20px; padding: 10px 20px; background-color: #444; border-radius: 30px;}
+.magazine .info .title{line-height: 1.2; font-size: 48px; margin: 0 0 20px;}
+.magazine .info .description{line-height: 1.5;}
+
+
+/* 이달의 플레이 리스트 */
+.playlist{}
+.playlist .item{width: 247px;}
+.playlist .item .song_title{ margin: 20px 0 0; font-size: 18px; font-weight: bold;}
+.playlist .item .song_artist{color: #777;}
+.playlist .playlist_wrap{}
+.playlist .playlist{}
+.playlist img{width: 240px;}
+.playlist .song_title{}
+.playlist .song_artist{}
+
+
+/* 추천 아티스트 */
+.artist{}
+.artist .item{width: 120px; text-align: center;}
+.artist .item_wrap{}
+.artist .item{}
+.artist .profile{}
+.artist .name{}
+
+/* 느낌 별 스테이션 */
+.station{}
+.station .item{width: 340px;}
+.station .section-title{}
+.station .station-wrap{}
+.station .item{width: 340px;}
+
+/* 이달의 TOP 100 */
+.charts{}
+.charts .item{width: 525px; display: flex; gap: 30px;}
+.charts .item img{width: 160px;}
+.charts .item .info{margin: 0 0 10px;}
+.charts .item .info .number{position: relative; display: inline-block; width: 24px; line-height: 24px; border-radius: 50%; background-color: #444; text-align: center;}
+.charts  .item .info .number::after{content: '-'; position: absolute; left: 34px; top: 2px;}
+.charts  .item .info .number.up::after{content: '▲'; color: red;}
+.charts  .item .info .number.down::after{content: '▼'; color: blue;}
+
+.charts .item .info .song_title{margin: 0 0 10px; font-size: 18px; font-weight: bold;}
+.charts .item .info .song_artist{color: #777;}
