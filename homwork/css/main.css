@@ -1,0 +1,194 @@
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+a{ text-decoration: none;}
+
+.header{width: 100%; background-color: #333;}
+.header .h_inner{ width: 1250px; height: 100px; margin: 0 auto;}
+
+.content{width: 100%; padding: 100px 0;}
+.content .inner{width: 1250px; margin: 0 auto;}
+.content .title{margin: 0 0 20px;font: bold 28px 'inherit'; text-align: center; color: #163A52;}
+.content .txt{max-width: 780px; margin: 0 auto 40px;line-height: 1.5; text-align: center; color: #999;}
+.content .box_wrap{ display: flex; flex-wrap: wrap; justify-content: space-between; width: 100%; }
+.content .box .btn{
+    display: block; width: 200px; margin: 20px 0 0 ;
+    background-color: #C89765; border-radius: 20px;
+    color: #fff; font: bold 14px/40px 'inherit';
+    text-align:center; text-transform: uppercase;
+    transition-duration: 0.3s;
+}
+.content .box .btn:hover{background-color: #fff; color: #333;}
+
+
+/* 임시 공통서식 */
+.content .box{}
+
+/* 
+    블록, 
+
+    * 부모요소에 text-algin 정렬 가능
+    인라인- span, strong, a, 가상요소 - 글자처럼 취급, 나란히 배치 , 너비/높이 적용x
+    인라인블록 - img, input - 나란히 배치, 글자처럼 취급, 너비/높이 적용 ok
+*/
+
+/* 
+odd : 홀수
+even : 짝수
+
+3n : 3의 배수
+2n : 2의 배수 = 짝수 / 2n+1, 2n-1 : 홀수
+
+.box .pic:nth-of-type(odd)
+모든 박스 하위 요소 중에서 pic 요소가 홀수번인것 선택
+
+.box:nth-of-type(odd) .pic
+홀수번호 박스 중에서 하위에 있는 pic 선택
+*/
+/* 
+    CTRL + , : 셋팅 열기
+    풍선도움말 끄기 - hover 검색 
+        - Editor › Hover: Enabled
+        - Controls whether the hover is shown. --> 체크 꺼주기
+    줄바꿈 - wrap 검색 
+        - Editor: Word Wrap
+        - Controls how lines should wrap.---> on으로 선택
+
+*/
+
+.service{}
+.service .box_wrap{gap: 30px;}
+.service .box{
+    width: 610px; padding: 30px 0; background-color: #f5f5f5;
+    display: flex;  
+}
+.service .box:nth-of-type(odd) .pic{order:1; border-left: 1px solid #ccc;}
+.service .box:nth-of-type(even) .pic{border-right: 1px solid #ccc;}
+
+.service .box .pic{width: 180px; text-align: center;}
+.service .box .info{width: calc(100% - 180px); padding: 0 50px;}
+.service .box .info .sub_ttl{font: bold 14px 'inherit'; color: #163A52;}
+.service .box .info .sub_txt{font: 14px/1.5 'inherit'; color: #999; margin: 20px 0;}
+.service .box .info .price{font: bold 14px 'inherit'; color: #C89765;}
+
+/* 
+    .inner -> 1250->100%
+    .title, .txt -> 왼쪽정렬
+    .box_wrap -> box 정렬 변경- flex-start, 배경색 설정
+    .box.picture - 너비 50%, 하위요소 - 그림 : 이미지 태그가 전체를 덮을 수 있게
+    .box.description - 이너의 절반크기 - 1250/2 로 너비 설정 / 안쪽여백 - 각 130px / 오른쪽만 0
+
+
+justify-content: flex-start;
+background-color: #eee;
+object-fit: cover;
+
+아까전에는 부모에 높이가 있었음. 부모의 크기를 넘지 않게 하려면 overflow :hidden
+자식이 삐져나온다 = 부모의 다음 형제요소에 넘친게 겹쳐서 표시될수 있음
+지금은 부모에 높이 없음. 자식크기만큼 알아서 높이가 설정되는 상태.
+그래서 overflow :hidden 필요 없음.
+
+*/
+.about{}
+.about .inner{width: 100%;} 
+.about .title{text-align: left;}
+.about .txt{text-align: left;}
+.about .box_wrap{justify-content: flex-start; background-color: #eee;}
+.about .box.picture{width: 50%;} 
+.about .box.picture img{width: 100%; object-fit: cover;}
+.about .box.description{width: 625px; padding: 130px 0 130px 130px;}
+.about .box .title{font-size: 40px;}
+.about .box .txt{font-size: 18px; line-height: 1.5;}
+
+
+ /* 
+        background: repeat scroll 기본값임.
+        만약 background 이전에 no-repeat 또는 fixed 값을 지정했다면 
+        덮어쓰기 된다.
+
+        size : cover : 공간을 다 덮어야 하기 때문에, 그림이 짤릴 수 있음.
+            contain : 그림이 공간 안에 다 들어가야 하기 때문에, 공간이 남을 수 있음.
+
+            background: url('../images/home-1-960x613.jpg') no-repeat;
+    background-size: contain;
+*/
+    
+
+/*  쉬는 시간 이후에 원본 사이트처럼
+    박스 3개가 나타나도록 만들어 보세요. 
+    색상은 #ddd로 설정 
+    높이 400px 임시로 설정
+*/
+.barbers{}
+.barbers .box_wrap{ gap: 30px;}
+.barbers .box{width: 396px;}
+.barbers .box .pic {width: 100%;}
+.barbers .box .pic img{width: 100%;}
+.barbers .box .info {width: 100%; padding: 30px; text-align: center;}
+.barbers .box .info .name{font: bold 16px 'inherit'; color: #163A52;}
+.barbers .box .info .sub_txt{font: 14px/1.5 'inherit'; color: #999; margin: 20px 0;}
+.barbers .box .info .barber_sns{}
+.barbers .box .info .barber_sns a{
+    display: inline-block; overflow: hidden;
+    font-size: 16px; color: #C89765; padding: 0 7px; }
+.barbers .box .info .barber_sns a i{}
+.barbers .box .info .barber_sns a span{font-size: 0; text-indent: -9999px; }
+
+
+/*  scroll, 반복x, size : 전체 덮음 
+    
+*/
+
+.gallery{padding: 200px 0;background: url('../images/bg-image-3.jpg') no-repeat; background-size: cover;}
+.gallery .title{font-size: 40px; text-align: left; color: #fff;}
+.gallery .txt{font-size: 18px; line-height: 1.5; text-align: left;}
+.gallery .box{width: 50%;}
+
+
+.blog{ background-color: #f0f0f0;}
+.blog .box{width: 100%; height: 460px; display: flex;}
+.blog .box:nth-of-type(1){background: url('../images/post-bg-1.jpg') no-repeat; background-size: cover;}
+.blog .box:nth-of-type(2){background-color: #fff;}
+.blog .box:nth-of-type(3){background: url('../images/post-bg-2.jpg') no-repeat; background-size: cover;}
+
+
+.blog .box .pic{width: calc(100% - 670px); overflow: hidden;}
+.blog .box .pic img{width: 100%;}
+.blog .box .info{width: 670px; padding: 100px;}
+.blog .box:nth-of-type(odd) .info .sub_ttl{font-size: 40px; color: #fff;margin: 0 0 20px;}
+.blog .box:nth-of-type(odd) .info .sub_txt{font-size: 16px; line-height: 1.5; color: #eee;}
+
+
+.footer{width: 100%;  padding: 100px 0 0;}
+.footer .f_inner{width: 1250px; margin: 0 auto;}
+
+.footer .company_wrap{width: 100%; display: flex; flex-direction: column; align-items: center;}
+.footer .company_wrap .logo{margin: 0 0 20px;}
+.footer .company_wrap .logo a {
+    display: block; width: 233px; height: 100px; overflow: hidden;
+    background: url('../images/logo-default-199x36.webp') no-repeat;
+    background-size: 100%;
+    text-indent: 100%; white-space: nowrap;
+}
+.footer .company_wrap .company_txt{max-width: 33%;font:14px/1.5 'inherit'; color: #999; text-align: center;}
+
+.footer .menu_wrap{margin: 30px 0;}
+.footer .menu_wrap .menu{display: flex; justify-content: center; }
+.footer .menu_wrap .menu li{margin: 20px 0;}
+.footer .menu_wrap .menu li a{
+    padding: 0 20px; text-transform: uppercase;
+    font-size: 14px; color: #163A52;
+    transition: 0.3s; /* 원본 요소에 바뀌는 시간 적기 */
+}
+.footer .menu_wrap .menu li:first-of-type a{color: #C89765;}
+.footer .menu_wrap .menu li a:hover{color: #C89765;} /* hover 바뀔 속성만 적기*/
+
+.footer .f_sns{text-align: center; margin: 0 0 40px;}
+.footer .f_sns a{padding: 0 7px; color: #C89765;}
+.footer .f_sns a i{}
+.footer .f_sns a span{font-size: 0; text-indent: -9999px;}
+
+.footer .copyrighter_wrap{width: 100%; background-color: #eee;}
+.footer .copyrighter_wrap .copyrighter{
+    text-align: center; line-height: 70px; color: #999;
+    font-size: 14px;
+}

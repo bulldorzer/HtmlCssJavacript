@@ -1,0 +1,50 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+
+h2{text-align: center;}
+/* 
+    row : 주축 - 가로 / 교차 : 세로
+    column : 주축 - 세로 / 교차 : 가로
+
+    주축 정렬 속성 - justify-content
+    교차축 정렬 속성 - align-content
+        ㄴ 좌/중/우 : flex-start / center / flex-end
+        ㄴ 균등분할 : space-around , space-between
+
+    주의사항
+    - 기본값이 nowrap이기 때문에 
+      교차측 정렬하려면 align-items 써야한다.
+    - wrap 상태이면 - align-content 써야한다.
+*/
+
+/* container - 부모*/
+.wrap{
+    display: flex; /* 부모*/
+    flex-direction: row; /* 가로방향-주축, 세로-교차측 */
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center; /* wrap - 교차측 정렬 */
+    /*align-items: flex-end;*/ /* nowrap - 교차측 정렬*/
+
+    width: 50%; height: 500px;
+    margin: 40px auto 0; /* 상 좌우 하*/
+    border: 1px solid #000;
+} 
+/* item - 자식 요소*/
+.box{
+    flex-basis: 100px;
+    flex-grow:1;
+    height: 100px; /* 위치,배치,크기*/
+    background-color: pink; /* 배경 */
+    border: 1px solid #000; /* 테두리*/
+    font: bold 2em 'inherit'; /* 굵게 부모크기의 1.5배 '부모폰트상속' */
+    /* 폰트기본 : 16px 맑은고딕 검정 */
+}
+
+/* 
+    기본도형
+        ㄴorder 높으면 뒤로 배치
+            ㄴ 태그 기록 순서에 따라
+*/
+/* 자식요소 세로정렬 개별적용 - 단, nowrap상태 */
+.box:nth-of-type(2){flex-grow: 10; align-self:center}
