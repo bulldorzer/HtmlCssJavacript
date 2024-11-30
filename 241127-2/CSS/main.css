@@ -115,7 +115,7 @@ a {
      - 홀수번호 박스중에서 하위에 있는 pic선택
 */
 .service .box:nth-of-type(odd) .pic {
-    order: 1;
+    order: 1; /*우선순위*/
     border-left: 1px solid #ccc;
 }
 
