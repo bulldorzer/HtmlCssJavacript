@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소</title>
+    <style>
+        .box{width: 200px; height: 100px; background-color: pink;}
+        .box::after{content: '-';}
+        .box.up::after{content: '▲'; background-color: yellow;}
+        .box.down::after{content: '▼'; background-color: red;}
+    </style>
+</head>
+   
+        <span class="box up">span</span>
+        <!-- 이미지태그는 가상요소가 없다 -->
+        <img src="img/img_artist_1.png" alt="" class="box up">
+        <div class="box down"> 박스 </div>
+         <!-- 태그 = 요소
+        가상요소 - 실제 태그x, css에서 만들어 주는 태그
+        요소의 앞 - ::befor /  뒷-::after 
+        요소 1개당 2개씩 존재 가능
+        인라인 요소- 원본 요소에 나란히 표시
+      -->
+</body>
+</html>
