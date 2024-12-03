@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-basic.html</title>
+</head>
+<body>
+    <script>
+        /*
+        var(구버전), let(신버전), const(상수{자바 final})
+        변수의 호이스팅
+        함수의 경우 선언을 뒤에 해도 컴파일할때 최상단을오 끌어 올려주어
+        var로 선언하면 함수와 같이 선언하기 전에 접근을 시도하면, (내부적으로)
+        변수의 선언이 최상단으로 끌어올려짐, undefined 값이 나옴
+        그래서 오류 상황을 캐치 못할 수도 있음 -> let사용
+        */
+
+        let y = 20;
+        let z; // 기본값 undefined (값자체가 없음 null과는 다른개념)
+        const MAX = 100;
+        console.log(x,y,z,MAX);
+        var x = 10;
+
+    </script>
+    <script src="javascript/1-basic.js" text="text/javascript"></script>
+</body>
+</html>
