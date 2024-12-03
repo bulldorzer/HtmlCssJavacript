@@ -40,7 +40,7 @@ console.log(btn);
 
 // target 프로퍼티만 추출해서, 프로퍼티 이름으로 실행
 btn.addEventListener('click',({target})=>{
-    console.log({target});
+    console.log("target",{target});
 });
 
 // 매개변수에 {}붙는것은 - 프로퍼티 추출

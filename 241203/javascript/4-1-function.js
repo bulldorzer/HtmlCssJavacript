@@ -20,7 +20,7 @@ const 함수2=function(){
 // 즉시실행 함수 - 이름x 호출x 실행된다
 // 선언과 동시에 즉시 실행
 // 1) 함수 초기화 할때 사용 2) 재사용 필요없는 일회성 동작 구현
-// ( function(){} ) ();
+// ( function(){} ) <=즉시실행함수  () <=프로퍼티,인수 넣는자리;
 (
     function () {
         console.log('즉시 실행함수!');
@@ -30,7 +30,7 @@ const 함수2=function(){
 let n = ( function(x,y){
     return x+y;
 }) (3,5);
-console.log(n);
+console.log("n",n);
 
 // 객체 안에 함수 들어갈 수 있음 (메서드)
 const calculator ={

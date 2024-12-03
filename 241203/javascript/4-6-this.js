@@ -21,13 +21,13 @@ function getFullName(){
     return `${this.firstName} ${this.lastName}`
 }
 //일반 함수 this - 나를 호출하는 영역을 가리킴
-// 화살표 함수 - this - windows임
 function getfull(){
     console.log(this);
-    // 나를 호출하는 영역을 가리킴
-    // 객체에서 호출하면 객체가 this
-    // 일반 영역에서 호출하면 windows(최상위)
 }
+// 화살표 함수 - this - windows임
+// 나를 호출하는 영역을 가리킴
+// 객체에서 호출하면 객체가 this
+// 일반 영역에서 호출하면 windows(최상위)
 // const getFullName=() =>{
 // // 화살표 함수 안에서 this는 window를가리킴 (브라우저 가리킴)
 //     console.log(this);

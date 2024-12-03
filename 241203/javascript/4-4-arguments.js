@@ -8,7 +8,11 @@ function printArgs(a,b,c) {
     for (const arg of arguments) { 
         console.log(arg);
     }
-    console.log(`-----------------------`);
+    console.log(`-----------(for-of)-----------`);
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(`<----------------------->`);
 }
 
 // 정상

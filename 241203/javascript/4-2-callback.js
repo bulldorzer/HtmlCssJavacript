@@ -20,7 +20,7 @@ function getFail() {
 }
 const question = '5+3=?';
 // console.log(prompt(question));
-// makeQuiz(prompt(question),'8',getSuccess,getFail)
+makeQuiz(prompt(question),'8',getSuccess,getFail)
 
 function getPrintHi(){
     return function () {

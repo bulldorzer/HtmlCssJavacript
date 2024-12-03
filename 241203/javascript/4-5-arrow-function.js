@@ -26,11 +26,11 @@ function nomarlFn(){
     console.log(arguments)
 }
 
+nomarlFn(1,2,3);
 // 에러발생! 
 // 화살표 함수에서는 arguments 사용못함
 const arrowFn = () => {
     console.log(arguments)
 }
 
-nomarlFn(1,2,3);
 arrowFn(1,2,3);

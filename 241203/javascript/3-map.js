@@ -1,8 +1,8 @@
-const fruits = ['apple','banana','orange'];
 
 // 기본형식
 // let 변수명 = 배열명.map((e)=>{});\
 
+const fruits = ['apple','banana','orange'];
 /*
     map을 이용하여 fruits를 대문자로 모두 변환하여 새로운 배열을 만드시오.
     newfruits 로 생성
@@ -36,6 +36,12 @@ let userAge = users.map(e=>e.age);
 console.log(userAge);
 
 let total = 0;
+
+// for (const age of userAge) {
+//     total += age;
+//     console.log("age",age);
+// }
+
 userAge.forEach(e=>{
     total+=e
     console.log("userAge",e);
@@ -48,9 +54,10 @@ const names = ['Alice','Bob','Charlie'];
 const age = [30,27,39];
 
 let obj = names.map((num,i)=>{
+    console.log("num",num);
     return{name:names[i], age : age[i]};
 })
-console.log(obj);
+console.log("obj",obj);
 
 // 프로퍼티 추가
 const person = {name:'anne',age:'27'};

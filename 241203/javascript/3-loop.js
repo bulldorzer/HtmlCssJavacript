@@ -28,9 +28,9 @@ let arr = [1,2,3];
 // 객체명.프로퍼티
 // 객체명.멤버변수
 // 객체명.key
-console.log(man.name, man['name']);
-console.log(man.age, man['age']);
-console.log(man.addr, man['addr']);
+console.log("man.name",man.name, man['name']);
+console.log("man.age",man.age, man['age']);
+console.log("man.addr",man.addr, man['addr']);
 
 // 인덱스 번호로 직접 값에 접근
 for (let i = 0; i < 3; i++) {
@@ -44,7 +44,7 @@ for (const key in man) {
 }
 // 객체 값을 반복 초기화 할땐 for in이 좋다
 for (const key in man) {
-    man[key] =0;
+    man[key] = 0;
 }
 console.log(man);
 
@@ -63,10 +63,13 @@ arr.forEach(e=>{
 
 // 현재값, 인덱스, 전체배열
 let newArr2 = arr.map((el,index,arr)=>{
-    console.log(el,index,arr);
+    console.log("el,index,arr",el,index,arr);
     return el*10;
 });
 console.log("newArr2",newArr2);
+
+let newArr3 = arr
+console.log("newArr3",newArr3);
 
 let newArr = arr.map(e=>{
     return e*10;

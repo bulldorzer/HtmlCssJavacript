@@ -43,8 +43,8 @@ let copy2 = [...arr]; // 원본과 별개로 다른곳에 저장
 
 arr[0]=100;
 
-console.log(copy1);
-console.log(copy2);
+console.log("copy1",copy1);
+console.log("copy2",copy2);
 
 
 // 배열 스프레드 - [ ]
@@ -75,12 +75,12 @@ const newUsers = users.map((e)=>{
 const newUsers = users.map((e)=>{
     return {...e,addr:'서울',pass:false};
 });
-console.log(newUsers);
+console.log("newUsers",newUsers);
 
 for(user of users){
     user['addr']="서울";
 }
-console.log(users);
+console.log("users",users);
 
 for (let i = 0; i < users.length; i++) {
     const element = users[i];
