@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원제 게시판</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reseter.css/2.0.0/reseter.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo"><a href="#">LOGO</a></h1>
+            <nav class="gnb">
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="list.html">Comunity</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="global_menu">
+                <a href="login.html"><i class="fa-solid fa-user"></i><span>로그인</span></a>
+                <a href="#"><i class="fa-solid fa-right-to-bracket"></i><span>회원가입</span></a>
+            </div>
+        </div>
+    </header>
+    <!-- 시험문제 section-->
+    <section class="content login">
+        <div class="inner">
+            <h2 class="title">로그인</h2>
+            <form action="#">
+                <div class="login_box">
+                    <div class="id_box box_color">
+                        <label for="id">아이디</label>
+                        <input type="text" id="id" class="input_box">
+                    </div>
+                    <div class="pw_box box_color">
+                        <label for="pw">비밀번호</label>
+                        <input type="password" id="pw" class="input_box">
+                    </div>
+                    <div class="error_box">
+                        <p class="error_message"></p>
+                    </div>
+                    <div class="login_btn_box">
+                        <button type="submit" id="login_btn">확인</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/login.js" type="module"></script>
+</body>
+
+</html>

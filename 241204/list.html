@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원제 게시판</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reseter.css/2.0.0/reseter.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/list.css">
+
+</head>
+<body>
+    
+<header class="header">
+    <div class="inner">
+        <h1 class="logo"><a href="#">LOGO</a></h1>
+        <nav class="gnb">
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="list.html">Comunity</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="global_menu">
+            <a href="login.html"><i class="fa-solid fa-user"></i><span>로그인</span></a>
+            <a href="#"><i class="fa-solid fa-right-to-bracket"></i><span>회원가입</span></a>
+        </div>
+    </div>
+</header>
+<section class="content board" id="board">
+    <div class="inner">
+        <h2 class="title">게시판</h2>
+        <div class="wrap">
+            <div class="board_list_wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>조회수</th>
+                            <th>작성일</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="search_box_wrap">
+                <form method="get" action="#" id="search_form">
+                    <select name="search_field">
+                        <option value="title">제목</option>
+                        <option value="content">내용</option>
+                    </select>
+                    <input type="text" id="search_word" name="search_word" />
+                    <button class="search_btn">검색</button>
+                </form>
+            </div>
+            <div class="pagenation_wrap">
+                <ul class="pagenation">
+                    <li class="first"><a href="#" title="처음"><i class="fa-solid fa-angles-left"></i></a></li>
+                    <li class="prev"><a href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li class="next"><a href="#"><i class="fa-solid fa-chevron-right"></i></a></li>
+                    <li class="last"><a href="#" title="마지막"><i class="fa-solid fa-angles-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- export한 데이터를 import해서 사용하는 js를 링크할 경우 type을 mudule이라고 작성한다 -->
+<script src="js/list.js" type="module"></script>
+<!-- <script src="js/list-memo.js" type="module"></script> -->
+</body>
+</html>

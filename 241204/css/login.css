@@ -1,0 +1,26 @@
+
+
+.login .login_box{max-width: 400px;margin: 0 auto;}
+
+/* 시험문제 */
+.login .login_box .box_color{position: relative; padding: 20px 0px 5px;border: 1px solid #ddd;}
+.login .login_box .box_color label{position: absolute; left: 10px ; top: 50%; transform: translateY(-50%); transition: 0.3s;}
+
+/* 자바스크립트에서 이벤트로 바뀌는 부분 */
+.login .login_box .box_color.label_size_change{ font-size: 10px;}
+.login .login_box .box_color.border_change{border-color: rgb(20, 218, 20);}
+/*----------------------------------*/
+
+.login .login_box .box_color.label_size_change label{top:10px}
+
+.login .login_box .id_box{border-radius: 5px 5px 0 0 ; }
+.login .login_box .pw_box{border-radius: 0 0 5px 5px;}
+
+.login .login_box label{position: absolute; top: 50%; transform: translateY(-50%); left: 15px;}
+
+.login .login_box input{padding: 3px 12px ;border: 0; outline: none;}
+.login .login_box .login_btn_box #login_btn{width: 100%; height: 40px; border: 0; 
+    background-color: #444; color: #fff;
+    border-radius: 5px;}
+.login .login_box .error_message{color: red; margin: 10px 0; font-size: 14px;}
+
